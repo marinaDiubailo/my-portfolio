@@ -4,29 +4,31 @@ import { Skill } from '../../../components/skill/Skill';
 import { FlexWrapper } from '../../../components/UIKit/FlexWrapper';
 import { Section } from '../../../components/UIKit/Section';
 import { SectionTitle } from '../../../components/UIKit/SectionTitle';
+import { Container } from '../../../components/UIKit/Container';
 
 export const Skills = memo(() => {
     return (
         <Section bg="#333e4e">
-            <FlexWrapper
-                direction="column"
-                width="1196px"
-                margin="0 auto"
-                align="center"
-            >
-                <SectionTitle underline>My Skills</SectionTitle>
-                <FlexWrapper justify="space-between" align="center" gap="20px">
-                    {skills.map((skill) => (
-                        <Skill
-                            key={skill.id}
-                            id={skill.id}
-                            description={skill.description}
-                            title={skill.title}
-                            viewBox={skill.viewBox || undefined}
-                        />
-                    ))}
+            <Container>
+                <FlexWrapper direction="column" align="center">
+                    <SectionTitle underline>My Skills</SectionTitle>
+                    <FlexWrapper
+                        justify="space-between"
+                        align="center"
+                        gap="20px"
+                    >
+                        {skills.map((skill) => (
+                            <Skill
+                                key={skill.id}
+                                id={skill.id}
+                                description={skill.description}
+                                title={skill.title}
+                                viewBox={skill.viewBox || undefined}
+                            />
+                        ))}
+                    </FlexWrapper>
                 </FlexWrapper>
-            </FlexWrapper>
+            </Container>
         </Section>
     );
 });

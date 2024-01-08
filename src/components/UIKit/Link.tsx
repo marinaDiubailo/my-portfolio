@@ -19,6 +19,7 @@ export const Link = styled.a<LinkPropsType>`
             bottom: -5px;
             left: 0;
         }
+        opacity: 0.5;
     }
 
     ${(props) =>

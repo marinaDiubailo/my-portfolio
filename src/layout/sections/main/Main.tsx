@@ -7,63 +7,63 @@ import { Text } from '../../../components/UIKit/Text';
 import serviceSprite from '../../../assets/icons/serviceSprite.svg';
 import photo from '../../../assets/images/photo1.jpg';
 import { SectionTitle } from '../../../components/UIKit/SectionTitle';
+import { Section } from '../../../components/UIKit/Section';
+import { Container } from '../../../components/UIKit/Container';
 
 export const Main = memo(() => {
     return (
-        <FlexWrapper
-            justify="space-between"
-            as="section"
-            margin="0 auto"
-            width="1196px"
-            padding="100px 0"
-        >
-            <FlexWrapper direction="column" width="60%">
-                <SectionTitle as="span">Hello!</SectionTitle>
-                <Title>I'm Marina Diubailo</Title>
-                <Introduction>
-                    <Text>I'm a </Text>
-                    <MainTitle>Web Developer</MainTitle>
-                    <Text>
-                        {''} who loves to craft attractive design experiences
-                        for the web.
-                    </Text>
-                </Introduction>
-                <FlexWrapper>
-                    <Button variant="primary">
-                        <Icon
-                            sprite={serviceSprite}
-                            id="mail"
-                            width="20px"
-                            height="20px"
-                            viewBox="0 0 20 20"
-                        />
-                        Email me
-                    </Button>
-                    <Button variant="secondary">
-                        <Icon
-                            sprite={serviceSprite}
-                            id="download"
-                            width="20px"
-                            height="20px"
-                            viewBox="0 0 20 20"
-                            onHov="none"
-                            fill="none"
-                            stroke="white"
-                        />
-                        Download CV
-                    </Button>
+        <Section>
+            <Container>
+                <FlexWrapper justify="space-between" align="center">
+                    <FlexWrapper direction="column" width="50%">
+                        <SectionTitle as="span">Hello!</SectionTitle>
+                        <Title>I'm Marina Diubailo</Title>
+                        <Introduction>
+                            <Text>I'm a </Text>
+                            <MainTitle>Web Developer</MainTitle>
+                            <Text>
+                                {''} who loves to craft attractive design
+                                experiences for the web.
+                            </Text>
+                        </Introduction>
+                        <FlexWrapper>
+                            <Button variant="primary">
+                                <Icon
+                                    sprite={serviceSprite}
+                                    id="mail"
+                                    width="20px"
+                                    height="20px"
+                                    viewBox="0 0 20 20"
+                                />
+                                Email me
+                            </Button>
+                            <Button variant="secondary">
+                                <Icon
+                                    sprite={serviceSprite}
+                                    id="download"
+                                    width="20px"
+                                    height="20px"
+                                    viewBox="0 0 20 20"
+                                    onHov="none"
+                                    fill="none"
+                                    stroke="white"
+                                />
+                                Download CV
+                            </Button>
+                        </FlexWrapper>
+                    </FlexWrapper>
+                    <img
+                        src={photo}
+                        alt="myPhoto"
+                        style={{
+                            width: '400px',
+                            borderRadius: '50%',
+                            border: '3px solid white',
+                        }}
+                    />
                 </FlexWrapper>
-            </FlexWrapper>
-            <img
-                src={photo}
-                alt="myPhoto"
-                style={{
-                    width: '400px',
-                    borderRadius: '50%',
-                    border: '3px solid white',
-                }}
-            />
-        </FlexWrapper>
+            </Container>
+        </Section>
     );
 });
 
