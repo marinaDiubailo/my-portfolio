@@ -31,8 +31,33 @@ export const Button = styled.button<ButtonPropsType>`
                 color: #4a51c9;
 
                 svg {
-                    stroke: #4a51c9;
+                    stroke: currentColor;
                 }
             }
         `}
 `;
+
+/*
+${(props) =>
+        props.sprite &&
+        props.id &&
+        css<ButtonPropsType>`
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-image: url(${(props) =>
+                    props.sprite + '#' + props.id});
+                background-size: cover;
+                margin-right: 10px;
+
+                &:hover {
+                    stroke: #4a51c9;
+                    fill: #4a51c9;
+                }
+            }
+        `}
+
+
+*/

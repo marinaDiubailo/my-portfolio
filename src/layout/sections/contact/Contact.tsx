@@ -12,7 +12,7 @@ import { Container } from '../../../components/UIKit/Container';
 
 export const Contact = memo(() => {
     return (
-        <Section bg="black">
+        <Section bg="black" id="contacts">
             <Container>
                 <FlexWrapper direction="column" align="center">
                     <SectionTitle underline>Contact me</SectionTitle>
@@ -29,7 +29,10 @@ export const Contact = memo(() => {
                             </span>
                             <FlexWrapper as="ul" gap="15px" align="center">
                                 <li>
-                                    <IconLink href="_blank">
+                                    <IconLink
+                                        href="https://github.com/marinaDiubailo"
+                                        target="_blank"
+                                    >
                                         <Icon
                                             sprite={socialSprite}
                                             id="github"
@@ -41,7 +44,10 @@ export const Contact = memo(() => {
                                     </IconLink>
                                 </li>
                                 <li>
-                                    <IconLink href="_blank">
+                                    <IconLink
+                                        href="https://www.linkedin.com"
+                                        target="_blank"
+                                    >
                                         <Icon
                                             sprite={socialSprite}
                                             id="linkedin"
@@ -53,7 +59,10 @@ export const Contact = memo(() => {
                                     </IconLink>
                                 </li>
                                 <li>
-                                    <IconLink href="_blank">
+                                    <IconLink
+                                        href="https://t.me/@marinadiubailo"
+                                        target="_blank"
+                                    >
                                         <Icon
                                             sprite={socialSprite}
                                             id="telegram"
@@ -73,6 +82,7 @@ export const Contact = memo(() => {
                                     width="20px"
                                     height="20px"
                                     viewBox="0 0 20 20"
+                                    fill="white"
                                 />
                                 <Text>marinadiubailo@gmail.com</Text>
                             </FlexWrapper>
@@ -101,7 +111,7 @@ export const Contact = memo(() => {
                                     height="20px"
                                     viewBox="0 0 22 20"
                                     fill="none"
-                                    onHov="none"
+                                    stroke="white"
                                 />
                             </Button>
                         </FlexWrapper>
@@ -132,6 +142,9 @@ const IconLink = styled.a`
     display: block;
 
     &:hover {
-        transform: scale(1.15);
+        transform: scale(1.3);
+        svg {
+            fill: #676cdb;
+        }
     }
 `;

@@ -12,7 +12,7 @@ import { Container } from '../../../components/UIKit/Container';
 
 export const Main = memo(() => {
     return (
-        <Section>
+        <Section mt={'120px'} id="main">
             <Container>
                 <FlexWrapper justify="space-between" align="center">
                     <FlexWrapper direction="column" width="50%">
@@ -34,6 +34,7 @@ export const Main = memo(() => {
                                     width="20px"
                                     height="20px"
                                     viewBox="0 0 20 20"
+                                    fill="white"
                                 />
                                 Email me
                             </Button>
@@ -44,7 +45,6 @@ export const Main = memo(() => {
                                     width="20px"
                                     height="20px"
                                     viewBox="0 0 20 20"
-                                    onHov="none"
                                     fill="none"
                                     stroke="white"
                                 />

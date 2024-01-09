@@ -8,7 +8,7 @@ import { Container } from '../../../components/UIKit/Container';
 
 export const Skills = memo(() => {
     return (
-        <Section bg="#333e4e">
+        <Section bg="#333e4e" id="skills">
             <Container>
                 <FlexWrapper direction="column" align="center">
                     <SectionTitle underline>My Skills</SectionTitle>

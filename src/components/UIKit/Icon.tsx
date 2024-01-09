@@ -9,7 +9,6 @@ type IconPropsType = {
     viewBox?: string;
     fill?: string;
     stroke?: string;
-    onHov?: string;
 };
 
 export const Icon = memo((props: IconPropsType) => {
@@ -19,15 +18,12 @@ export const Icon = memo((props: IconPropsType) => {
         height = '50',
         viewBox = '0 0 50 50',
         fill = '#676cdb',
-        onHov = '#676cdb',
-
         sprite,
         stroke,
     } = props;
 
     return (
         <Svg
-            onHov={onHov}
             width={width}
             height={height}
             viewBox={viewBox}
@@ -40,12 +36,6 @@ export const Icon = memo((props: IconPropsType) => {
     );
 });
 
-type SvgPropType = {
-    onHov?: string;
-};
+type SvgPropType = {};
 
-const Svg = styled.svg<SvgPropType>`
-    &:hover {
-        fill: ${(props) => props.onHov || undefined};
-    }
-`;
+const Svg = styled.svg<SvgPropType>``;

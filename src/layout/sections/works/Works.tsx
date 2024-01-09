@@ -11,9 +11,14 @@ import { Container } from '../../../components/UIKit/Container';
 
 export const Works = memo(() => {
     return (
-        <Section>
+        <Section id="works">
             <Container>
-                <FlexWrapper direction="column" justify="center" align="center">
+                <FlexWrapper
+                    direction="column"
+                    justify="center"
+                    align="center"
+                    gap="10px"
+                >
                     <SectionTitle underline>My Works</SectionTitle>
                     <FlexWrapper as="ul" gap="20px" justify="center">
                         {links.map((link) => (
@@ -27,13 +32,11 @@ export const Works = memo(() => {
                     <FlexWrapper justify="space-between" align="center">
                         <Work
                             src={SocialNetwork}
-                            alt="Social network"
                             title="Social Network"
                             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
                         />
                         <Work
                             src={Clock}
-                            alt="25+5 Clock"
                             title="25+5 Clock"
                             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
                         />

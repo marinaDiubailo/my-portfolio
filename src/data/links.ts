@@ -31,16 +31,16 @@ export const NAVIGATION_LINKS: LinkType[] = [
     {
         id: 'home',
         name: 'Home',
-        href: '_blank',
+        href: '#main',
     },
     {
         id: 'skills',
         name: 'Skills',
-        href: '_blank',
+        href: '#skills',
     },
     {
         id: 'works',
         name: 'Works',
-        href: '_blank',
+        href: '#works',
     },
 ];
