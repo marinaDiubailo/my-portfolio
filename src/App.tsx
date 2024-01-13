@@ -1,35 +1,31 @@
-import './App.css';
-
+import styled from 'styled-components';
 import { Header } from './layout/header/Header';
-import { Contact } from './layout/sections/contact/Contact';
+import { Contacts } from './layout/sections/contacts/Contacts';
 import { Main } from './layout/sections/main/Main';
 import { Skills } from './layout/sections/skills/Skills';
-import { Works } from './layout/sections/works/Works';
+import { Portfolio } from './layout/sections/portfolio/Portfolio';
+import { Footer } from './layout/footer/Footer';
 
 function App() {
     return (
-        <div className="App">
+        <StyledApp>
             <Header />
             <main style={{ flexGrow: '1' }}>
                 <Main />
                 <Skills />
-                <Works />
-                <Contact />
+                <Portfolio />
+                <Contacts />
             </main>
-            <footer
-                style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    minHeight: '120px',
-                }}
-            >
-                <small style={{ opacity: 0.5 }}>
-                    © 2024 Marina Diubailo | All rights reserved
-                </small>
-            </footer>
-        </div>
+            <Footer />
+        </StyledApp>
     );
 }
+
+const StyledApp = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+`;
 
 export default App;

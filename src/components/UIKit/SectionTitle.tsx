@@ -1,29 +1,24 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+import { theme } from '../../styles/Theme';
 
-type SectionTitleProps = {
-    underline?: boolean;
-};
-export const SectionTitle = styled.h2<SectionTitleProps>`
-    font-size: 40px;
-    line-height: 180%;
+export const SectionTitle = styled.h2`
+    font-size: 2.2rem;
     font-family: 'Playfair Display', serif;
-    margin-bottom: 30px;
+    font-weight: 700;
     text-align: center;
     position: relative;
-    display: inline-block;
+    letter-spacing: 0.05em;
+    position: relative;
+    margin-bottom: 100px;
 
-    ${(props) =>
-        props.underline &&
-        css<SectionTitleProps>`
-            &::after {
-                content: '';
-                width: 70%;
-                height: 2px;
-                position: absolute;
-                background: #676cdb;
-                opacity: 0.5;
-                left: 15%;
-                bottom: -8px;
-            }
-        `}
+    &::after {
+        content: '';
+        width: 100px;
+        height: 4px;
+        position: absolute;
+        background-color: ${theme.colors.accent};
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -30px;
+    }
 `;

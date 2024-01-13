@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/Theme';
 
 export const Text = styled.span`
-    color: rgba(255, 255, 255, 0.5);
+    color: ${theme.colors.secondary};
     line-height: 180%;
 `;

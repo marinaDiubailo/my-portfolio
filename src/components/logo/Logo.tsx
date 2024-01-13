@@ -1,20 +1,18 @@
 import { memo } from 'react';
-// import styled from 'styled-components';
-import { Icon } from '../UIKit/Icon';
-import skillsSprite from '../../assets/icons/skillsSprite.svg';
+import styled from 'styled-components';
+import { theme } from '../../styles/Theme';
 
-type LogoPropsType = {};
-
-export const Logo = memo((props: LogoPropsType) => {
-    return (
-        <a href="_blank">
-            <Icon
-                id={'code'}
-                sprite={skillsSprite}
-                fill="white"
-                width="70px"
-                height="70px"
-            />
-        </a>
-    );
+export const Logo = memo(() => {
+    return <StyledLogo href="#main">Marina</StyledLogo>;
 });
+
+export const StyledLogo = styled.a`
+    font-family: 'Imperial Script', cursive;
+    color: ${theme.colors.primary};
+    font-size: 2rem;
+
+    &::first-letter {
+        color: ${theme.colors.accent};
+        text-shadow: 1px 1px 4px ${theme.colors.accent};
+    }
+`;

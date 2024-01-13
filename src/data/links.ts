@@ -4,7 +4,7 @@ type LinkType = {
     href: string;
 };
 
-export const WORKS_LINKS: LinkType[] = [
+export const PROJECTS_LINKS: LinkType[] = [
     {
         id: 'all',
         name: 'all',
@@ -39,8 +39,13 @@ export const NAVIGATION_LINKS: LinkType[] = [
         href: '#skills',
     },
     {
-        id: 'works',
-        name: 'Works',
-        href: '#works',
+        id: 'portfolio',
+        name: 'Portfolio',
+        href: '#portfolio',
+    },
+    {
+        id: 'contacts',
+        name: 'Contacts',
+        href: '#contacts',
     },
 ];

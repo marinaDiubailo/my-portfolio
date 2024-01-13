@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 type FlexWrapperPropsType = {
     direction?: string;
@@ -7,14 +7,22 @@ type FlexWrapperPropsType = {
     wrap?: string;
     gap?: string;
     width?: string;
+    fullHeight?: boolean;
 };
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
     display: flex;
+    // outline: 1px solid blue;
     gap: ${(props) => props.gap || '0px'};
     width: ${(props) => props.width || '100%'};
     flex-direction: ${(props) => props.direction || 'row'};
     justify-content: ${(props) => props.justify || 'flex-start'};
     align-items: ${(props) => props.align || 'flex-start'};
     flex-wrap: ${(props) => props.wrap || 'wrap'};
+
+    ${(props) =>
+        props.fullHeight &&
+        css<FlexWrapperPropsType>`
+            height: 100%;
+        `}
 `;

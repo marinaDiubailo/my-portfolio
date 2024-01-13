@@ -4,33 +4,35 @@ export const SKILLS: SkillPropsType[] = [
     {
         id: 'html',
         title: 'html5',
-        viewBox: '0 0 100 100',
+        viewBox: '0 0 120 120',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
     },
     {
         id: 'css',
         title: 'css3',
-        viewBox: '0 0 93 93',
+        viewBox: '0 0 118 118',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
     },
     {
         id: 'sass',
         title: 'sass',
-        viewBox: '0 0 30 30',
+        viewBox: '0 0 95 100',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
     },
     {
         id: 'styledComponents',
         title: 'styled components',
+        viewBox: '-8 -4 46 46',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
     },
     {
         id: 'react',
         title: 'react',
+        viewBox: '0 -10 115 115',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
     },
@@ -43,7 +45,7 @@ export const SKILLS: SkillPropsType[] = [
     {
         id: 'redux',
         title: 'redux',
-        viewBox: '0 0 255 255',
+        viewBox: '0 0 110 110',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
     },
@@ -59,6 +61,13 @@ export const SKILLS: SkillPropsType[] = [
         id: 'storybook',
         title: 'storybook',
         viewBox: '0 0 150 150',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
+    },
+    {
+        id: 'next',
+        title: 'next',
+        viewBox: '-10 -10 280 280',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
     },

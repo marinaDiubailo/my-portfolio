@@ -1,31 +1,39 @@
 import styled, { css } from 'styled-components';
+import { theme } from '../../styles/Theme';
 
 type LinkPropsType = {
-    upper?: boolean;
+    upperCase?: boolean;
+    normal?: boolean;
 };
 export const Link = styled.a<LinkPropsType>`
-    color: white;
-    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4;
+    color: ${theme.colors.primary};
     font-weight: 500;
+    text-align: center;
     position: relative;
 
-    &:hover {
-        &::after {
-            content: '';
-            width: 100%;
-            height: 3px;
-            position: absolute;
-            background: #676cdb;
-            bottom: -5px;
-            left: 0;
-        }
-        opacity: 0.5;
-    }
+    ${(props) =>
+        props.normal &&
+        css<LinkPropsType>`
+            &::after {
+                content: '';
+                width: 100%;
+                position: absolute;
+                background: ${theme.colors.accent};
+                bottom: -5px;
+                left: 0;
+            }
+            &:hover {
+                &::after {
+                    height: 10px;
+                }
+            }
+        `}
 
     ${(props) =>
-        props.upper &&
+        props.upperCase &&
         css<LinkPropsType>`
             text-transform: uppercase;
-            font-size: 18px;
         `}
 `;

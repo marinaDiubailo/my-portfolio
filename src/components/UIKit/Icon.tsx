@@ -14,10 +14,10 @@ type IconPropsType = {
 export const Icon = memo((props: IconPropsType) => {
     const {
         id,
-        width = '50',
-        height = '50',
-        viewBox = '0 0 50 50',
-        fill = '#676cdb',
+        width = '80',
+        height = '80',
+        viewBox = '0 0 80 80',
+        fill = '#333',
         sprite,
         stroke,
     } = props;
