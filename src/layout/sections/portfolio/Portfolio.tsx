@@ -32,7 +32,11 @@ export const Portfolio = memo(() => {
                         ))}
                     </FlexWrapper>
                 </TabsContainer>
-                <FlexWrapper justify="space-between" align="flex-start">
+                <FlexWrapper
+                    justify="space-between"
+                    align="flex-start"
+                    wrap="wrap"
+                >
                     <Project
                         src={SocialNetwork}
                         title="Social Network"

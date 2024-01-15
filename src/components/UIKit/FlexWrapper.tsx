@@ -12,13 +12,13 @@ type FlexWrapperPropsType = {
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
     display: flex;
-    // outline: 1px solid blue;
+    outline: 1px solid #e756d4;
     gap: ${(props) => props.gap || '0px'};
     width: ${(props) => props.width || '100%'};
     flex-direction: ${(props) => props.direction || 'row'};
     justify-content: ${(props) => props.justify || 'flex-start'};
     align-items: ${(props) => props.align || 'flex-start'};
-    flex-wrap: ${(props) => props.wrap || 'wrap'};
+    flex-wrap: ${(props) => props.wrap || 'no-wrap'};
 
     ${(props) =>
         props.fullHeight &&

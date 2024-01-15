@@ -11,7 +11,7 @@ export const Skills = memo(() => {
         <section id="skills">
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
-                <FlexWrapper justify="space-between" gap="20px">
+                <FlexWrapper justify="space-between" gap="20px" wrap="wrap">
                     {skills.map((skill) => (
                         <Skill
                             key={skill.id}
