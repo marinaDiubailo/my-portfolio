@@ -10,6 +10,7 @@ import photo from '../../../assets/images/photo1.jpg';
 import { Container } from '../../../components/UIKit/Container';
 // import bgPhoto from '../../../assets/icons/bgPhoto.svg';
 import { theme } from '../../../styles/Theme';
+import { font } from '../../../styles/Common';
 
 export const Main = memo(() => {
     return (
@@ -18,43 +19,44 @@ export const Main = memo(() => {
                 <FlexWrapper
                     align="center"
                     fullHeight
-                    justify="space-between"
+                    justify="space-around"
                     wrap="wrap"
                 >
-                    <div style={{ marginBottom: '40px' }}>
+                    <div style={{ marginBottom: '60px' }}>
                         <Greeting>Hello!</Greeting>
-                        <Name>I'm Marina Diubailo</Name>
+                        <Name>
+                            I'm <span>Marina Diubailo</span>
+                        </Name>
                         <Introduction>
                             <Text>I’m a self-taught </Text>
                             <MainTitle>front-end developer</MainTitle>
-                            <Text>
-                                {''} based in Mogilev, Belarus. I love to craft
-                                attractive design experiences for the web.
-                            </Text>
+                            <Text>{''} based in Mogilev, Belarus.</Text>
                         </Introduction>
-                        <Button variant="primary">
-                            <Icon
-                                sprite={serviceSprite}
-                                id="mail"
-                                width="20px"
-                                height="20px"
-                                viewBox="0 0 20 20"
-                                fill="white"
-                            />
-                            Email me
-                        </Button>
-                        <Button variant="secondary">
-                            <Icon
-                                sprite={serviceSprite}
-                                id="download"
-                                width="20px"
-                                height="20px"
-                                viewBox="0 0 20 20"
-                                fill="none"
-                                stroke="white"
-                            />
-                            Download CV
-                        </Button>
+                        <FlexWrapper align="center" wrap="wrap">
+                            <Button variant="primary">
+                                <Icon
+                                    sprite={serviceSprite}
+                                    id="mail"
+                                    width="20px"
+                                    height="20px"
+                                    viewBox="0 0 20 20"
+                                    fill="white"
+                                />
+                                Email me
+                            </Button>
+                            <Button variant="secondary">
+                                <Icon
+                                    sprite={serviceSprite}
+                                    id="download"
+                                    width="20px"
+                                    height="20px"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                    stroke="white"
+                                />
+                                Download CV
+                            </Button>
+                        </FlexWrapper>
                     </div>
                     <PhotoWrapper>
                         <Photo src={photo} alt="Marina Diubailo" />
@@ -70,31 +72,62 @@ const StyledSection = styled.section`
 `;
 
 const Greeting = styled.span`
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 3rem;
+    ${font({
+        family: "'Playfair Display', serif",
+        weight: 700,
+        Fmin: 26,
+        Fmax: 36,
+    })}
 `;
 
 const Name = styled.h2`
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 3rem;
-    margin-bottom: 10px;
+    ${font({
+        family: "'Playfair Display', serif",
+        weight: 700,
+        Fmin: 36,
+        Fmax: 60,
+    })}
+
+    span {
+        white-space: nowrap;
+        position: relative;
+        z-index: 0;
+
+        &:before {
+            content: '';
+            width: 100%;
+            display: inline-block;
+            height: 20px;
+            background-color: ${theme.colors.accent};
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+            opacity: 0.8;
+        }
+    }
 `;
 
 const MainTitle = styled.h1`
+    ${font({
+        Fmin: 16,
+        Fmax: 20,
+    })}
     display: inline-block;
 `;
 
 const Introduction = styled.div`
-    margin-bottom: 30px;
-    max-width: 500px;
+    margin: 10px 0 30px;
+
+    @media ${theme.media.mobile} {
+        margin: 20px 0 35px;
+    }
 `;
 
 const Photo = styled.img`
     width: 350px;
     height: 430px;
     object-fit: cover;
+    margin-right: 20px;
 
     @media ${theme.media.mobile} {
         width: 310px;

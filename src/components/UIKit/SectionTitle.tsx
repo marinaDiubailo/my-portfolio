@@ -1,10 +1,14 @@
 import styled from 'styled-components';
+import { font } from '../../styles/Common';
 import { theme } from '../../styles/Theme';
 
 export const SectionTitle = styled.h2`
-    font-size: 2.2rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
+    ${font({
+        family: "'Playfair Display', serif",
+        weight: 700,
+        Fmin: 36,
+        Fmax: 44,
+    })}
     text-align: center;
     position: relative;
     letter-spacing: 0.05em;
@@ -20,5 +24,13 @@ export const SectionTitle = styled.h2`
         left: 50%;
         transform: translateX(-50%);
         bottom: -30px;
+    }
+
+    @media ${theme.media.mobile} {
+        margin-bottom: 60px;
+
+        &::after {
+            bottom: -25px;
+        }
     }
 `;

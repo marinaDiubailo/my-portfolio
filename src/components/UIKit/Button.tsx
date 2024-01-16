@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { theme } from '../../styles/Theme';
+import { font } from '../../styles/Common';
 
 type ButtonPropsType = {
     variant: 'primary' | 'secondary';
@@ -10,7 +11,11 @@ export const Button = styled.button<ButtonPropsType>`
     align-items: center;
     gap: 10px;
     padding: 20px 40px;
-    color: ${theme.colors.primary};
+    ${font({
+        color: theme.colors.primary,
+        Fmin: 16,
+        Fmax: 20,
+    })}
 
     ${(props) =>
         props.variant === 'primary' &&
@@ -34,4 +39,8 @@ export const Button = styled.button<ButtonPropsType>`
                 }
             }
         `};
+
+    @media ${theme.media.tablet} {
+        padding: 15px 20px;
+    }
 `;

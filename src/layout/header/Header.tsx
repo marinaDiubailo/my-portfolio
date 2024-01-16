@@ -26,7 +26,7 @@ export const Header = memo((props: HeaderPropsType) => {
 const StyledHeader = styled.header`
     position: fixed;
     width: 100%;
-    padding: 30px 0;
+    padding: 20px 0;
     z-index: 10;
 
     ${Container} {

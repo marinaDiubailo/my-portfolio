@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { font } from './Common';
 import { theme } from './Theme';
 
 export const GlobalStyles = createGlobalStyle`
@@ -47,6 +48,10 @@ export const GlobalStyles = createGlobalStyle`
         padding: 100px 0;
         display: flex;
 
+        @media ${theme.media.tablet} {
+            padding: 80px 0;
+        }
+
         &:nth-child(3n+1){
             background-color: ${theme.bg.bgPrimary}
         }
@@ -61,14 +66,21 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     p {
-        color: ${theme.colors.secondary};
+        ${font({
+            color: theme.colors.secondary,
+            lineHeight: 1.5,
+            Fmin: 14,
+            Fmax: 20,
+        })}
+
         margin: 15px 0;
-        line-height: 1.5;
+
     }
 
     h1,
     h2,
-    h3 {
+    h3,
+    h4 {
         font-size: 1rem;
         font-weight: 400;
     }
@@ -82,15 +94,10 @@ export const GlobalStyles = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         height: 100vh;
         width: 100%;
+        min-width: 360px;
         color: ${theme.colors.primary};
         font-size: 20px;
         line-height: 1.2;
         background: ${theme.bg.bgPrimary};
     }
 `;
-
-/*
-background: #fffdf9;
-font-family: 'Imperial Script', cursive;
-font-family: 'Red Hat Display', sans-serif;
-*/

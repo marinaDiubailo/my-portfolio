@@ -5,7 +5,6 @@ type SubTitlePropsType = {
 };
 
 export const SubTitle = styled.h3<SubTitlePropsType>`
-    text-align: center;
     font-weight: 500;
 
     ${(props) =>
@@ -18,6 +17,5 @@ export const SubTitle = styled.h3<SubTitlePropsType>`
         props.transform === 'capitalize' &&
         css<SubTitlePropsType>`
             text-transform: capitalize;
-            font-size: 1.5rem;
         `}
 `;
