@@ -1,10 +1,9 @@
 import { memo } from 'react';
-import styled from 'styled-components';
-import { CategoryType } from '../../data/skills';
-// import styled from 'styled-components';
-import { FlexWrapper } from '../UIKit/FlexWrapper';
-import { SubTitle } from '../UIKit/SubTitle';
+import { CategoryType } from '../../../../data/skills';
+import { FlexWrapper } from '../../../../components/UIKit/FlexWrapper';
+import { SubTitle } from '../../../../components/UIKit/SubTitle';
 import { Skill, SkillPropsType } from './Skill';
+import { S } from './Skill_Styles';
 
 type SkillCategoryPropsType = {
     category: CategoryType;
@@ -14,7 +13,7 @@ type SkillCategoryPropsType = {
 export const SkillCategory = memo((props: SkillCategoryPropsType) => {
     const { category, skills } = props;
     return (
-        <SkillCategoryWrapper
+        <S.SkillCategoryWrapper
             direction="column"
             gap="20px"
             justify="center"
@@ -31,10 +30,6 @@ export const SkillCategory = memo((props: SkillCategoryPropsType) => {
                     />
                 ))}
             </FlexWrapper>
-        </SkillCategoryWrapper>
+        </S.SkillCategoryWrapper>
     );
 });
-
-const SkillCategoryWrapper = styled(FlexWrapper)`
-    margin-bottom: 30px;
-`;

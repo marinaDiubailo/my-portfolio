@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { SKILLS as skills } from '../../../data/skills';
 import { SectionTitle } from '../../../components/UIKit/SectionTitle';
 import { Container } from '../../../components/UIKit/Container';
-import { SkillCategory } from '../../../components/skill/SkillCategory';
+import { SkillCategory } from './skill/SkillCategory';
 
 export const Skills = memo(() => {
     return (

@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import styled from 'styled-components';
-import { theme } from '../../styles/Theme';
+import { theme } from '../../../styles/Theme';
 
 export const Logo = memo(() => {
     return <StyledLogo href="#main">Marina</StyledLogo>;

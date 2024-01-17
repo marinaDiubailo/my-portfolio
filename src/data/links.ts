@@ -1,7 +1,14 @@
-type LinkType = {
+export type LinkType = {
     id: string;
     name: string;
     href: string;
+};
+
+type SocialLinkType = {
+    href: string;
+    ariaLabel: string;
+    iconId: string;
+    viewBox: string;
 };
 
 export const PROJECTS_LINKS: LinkType[] = [
@@ -47,5 +54,26 @@ export const NAVIGATION_LINKS: LinkType[] = [
         id: 'contacts',
         name: 'Contacts',
         href: '#contacts',
+    },
+];
+
+export const SOCIAL_LINKS: SocialLinkType[] = [
+    {
+        href: 'https://github.com/marinaDiubailo',
+        ariaLabel: 'Ссылка github',
+        iconId: 'github',
+        viewBox: '0 0 25 25',
+    },
+    {
+        href: 'https://www.linkedin.com',
+        ariaLabel: 'Ссылка linkedin',
+        iconId: 'linkedin',
+        viewBox: '0 0 24 24',
+    },
+    {
+        href: 'https://t.me/marinadiubailo',
+        ariaLabel: 'Ссылка telegram',
+        iconId: 'telegram',
+        viewBox: '2 0 19 19',
     },
 ];

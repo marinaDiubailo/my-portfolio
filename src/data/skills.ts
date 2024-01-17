@@ -1,4 +1,4 @@
-import { SkillPropsType } from '../components/skill/Skill';
+import { SkillPropsType } from '../layout/sections/skills/skill/Skill';
 
 export type CategoryType =
     | 'programming languages'

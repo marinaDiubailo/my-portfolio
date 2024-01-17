@@ -1,38 +1,8 @@
-import { memo } from 'react';
 import styled from 'styled-components';
-import { theme } from '../../styles/Theme';
-import { Button } from '../UIKit/Button';
-import { Link } from '../UIKit/Link';
-import { SubTitle } from '../UIKit/SubTitle';
-
-type ProjectPropsType = {
-    title: string;
-    src: string;
-    description: string;
-};
-
-export const Project = memo((props: ProjectPropsType) => {
-    const { title, src, description } = props;
-
-    return (
-        <ProjectContainer>
-            <ImageWrapper>
-                <Image src={src} alt={title} />
-                <Button variant="primary">VIEW PROJECT</Button>
-            </ImageWrapper>
-            <ProjectDescription>
-                <SubTitle transform="capitalize">{title}</SubTitle>
-                <p>{description}</p>
-                <Link href="#" upperCase normal>
-                    demo
-                </Link>
-                <Link href="#" upperCase normal>
-                    code
-                </Link>
-            </ProjectDescription>
-        </ProjectContainer>
-    );
-});
+import { theme } from '../../../../styles/Theme';
+import { Button } from '../../../../components/UIKit/Button';
+import { Link } from '../../../../components/UIKit/Link';
+import { SubTitle } from '../../../../components/UIKit/SubTitle';
 
 const ProjectContainer = styled.div`
     width: 330px;
@@ -100,3 +70,10 @@ const ProjectDescription = styled.div`
         text-align: start;
     }
 `;
+
+export const S = {
+    ProjectContainer,
+    ImageWrapper,
+    Image,
+    ProjectDescription,
+};

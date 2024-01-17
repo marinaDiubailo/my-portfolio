@@ -1,14 +1,30 @@
 import { memo } from 'react';
-// import { theme } from '../../../styles/Theme';
 import { FlexWrapper } from '../../../components/UIKit/FlexWrapper';
 import { Link } from '../../../components/UIKit/Link';
 import { SectionTitle } from '../../../components/UIKit/SectionTitle';
-import { Project } from '../../../components/project/Project';
+import { Project } from './project/Project';
 import { PROJECTS_LINKS as links } from '../../../data/links';
 import SocialNetwork from '../../../assets/images/social-network.webp';
 import Clock from '../../../assets/images/25+5Clock.webp';
 import { Container } from '../../../components/UIKit/Container';
 import styled from 'styled-components';
+
+const portfolio = [
+    {
+        id: 1,
+        src: SocialNetwork,
+        title: 'Social Network',
+        description:
+            'adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
+    },
+    {
+        id: 2,
+        src: Clock,
+        title: '25+5 Clock',
+        description:
+            'adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
+    },
+];
 
 export const Portfolio = memo(() => {
     return (
@@ -38,16 +54,14 @@ export const Portfolio = memo(() => {
                     wrap="wrap"
                     gap="30px"
                 >
-                    <Project
-                        src={SocialNetwork}
-                        title="Social Network"
-                        description="adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
-                    />
-                    <Project
-                        src={Clock}
-                        title="25+5 Clock"
-                        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
-                    />
+                    {portfolio.map((project) => (
+                        <Project
+                            key={project.id}
+                            src={project.src}
+                            title={project.title}
+                            description={project.description}
+                        />
+                    ))}
                 </FlexWrapper>
             </Container>
         </section>

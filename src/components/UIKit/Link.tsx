@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { font } from '../../styles/Common';
 import { theme } from '../../styles/Theme';
 
 type LinkPropsType = {
@@ -7,14 +6,10 @@ type LinkPropsType = {
     normal?: boolean;
 };
 export const Link = styled.a<LinkPropsType>`
-    ${font({
-        family: "'Poppins', sans-serif",
-        color: theme.colors.primary,
-        weight: 500,
-        lineHeight: 1.4,
-        Fmin: 16,
-        Fmax: 20,
-    })}
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: ${theme.colors.primary};
+    line-height: 1.4;
     text-align: center;
     position: relative;
 
@@ -40,5 +35,6 @@ export const Link = styled.a<LinkPropsType>`
         props.upperCase &&
         css<LinkPropsType>`
             text-transform: uppercase;
+            font-size: 18px;
         `}
 `;
