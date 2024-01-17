@@ -5,6 +5,7 @@ import { FlexWrapper } from '../../components/UIKit/FlexWrapper';
 import { Icon } from '../../components/UIKit/Icon';
 import socialSprite from '../../assets/icons/socialSprite.svg';
 import { theme } from '../../styles/Theme';
+import { font } from '../../styles/Common';
 
 export const Footer = memo(() => {
     return (
@@ -70,13 +71,16 @@ export const Footer = memo(() => {
 
 const StyledFooter = styled.footer`
     background-color: ${theme.bg.bgAccent};
-    padding: 50px 0;
+    padding: 40px 0;
     display: flex;
 `;
 
 const FooterTitle = styled.span`
-    font-size: 2.5rem;
-    font-weight: 700;
+    ${font({
+        Fmin: 26,
+        Fmax: 40,
+        weight: 700,
+    })}
 `;
 
 const SocialList = styled.ul`
@@ -118,5 +122,10 @@ const IconLink = styled.a`
 `;
 
 const Copyright = styled.small`
-    color: ${theme.colors.secondary};
+    ${font({
+        color: theme.colors.secondary,
+        Fmin: 12,
+        Fmax: 18,
+    })}
+    text-align: center;
 `;

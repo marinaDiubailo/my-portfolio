@@ -6,6 +6,7 @@ import { Icon } from '../../../components/UIKit/Icon';
 import { SectionTitle } from '../../../components/UIKit/SectionTitle';
 import serviceSprite from '../../../assets/icons/serviceSprite.svg';
 import { Container } from '../../../components/UIKit/Container';
+import { font } from '../../../styles/Common';
 
 export const Contacts = memo(() => {
     return (
@@ -61,17 +62,23 @@ const Field = styled.input.attrs(({ placeholder }) => ({
 }))`
     padding: 7px 15px;
     width: 100%;
-    border: 1px solid grey;
-    font-size: 1.2rem;
-    font-family: inherit;
-    border-radius: 8px;
-    border: 1px solid #e8ecf4;
+    border: 1px solid ${theme.colors.secondary};
+    ${font({
+        family: 'inherit',
+        color: theme.colors.primary,
+        Fmin: 16,
+        Fmax: 20,
+    })}
     background-color: ${theme.bg.bgSecondary};
-    color: ${theme.colors.primary};
 
     &::placeholder {
-        opacity: 0.5;
-        letter-spacing: 0.05em;
+        ${font({
+            family: 'inherit',
+            color: theme.colors.secondary,
+            Fmin: 14,
+            Fmax: 18,
+        })}
+        letter-spacing: 0.06em;
     }
 
     &:focus {
