@@ -35,13 +35,17 @@ export const Project = memo((props: ProjectPropsType) => {
 });
 
 const ProjectContainer = styled.div`
-    max-width: 540px;
+    width: 330px;
+    flex-grow: 1;
     background-color: ${theme.bg.bgPrimary};
     box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
 
     ${Link} + ${Link} {
         margin-left: 20px;
+    }
+
+    @media ${theme.media.desktop} {
+        max-width: 540px;
     }
 `;
 
@@ -57,19 +61,29 @@ const ImageWrapper = styled.div`
         transform: translate(-50%, -50%);
     }
 
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(4px);
+        opacity: 0;
+    }
+
     &:hover {
+        &::before,
         ${Button} {
             opacity: 1;
         }
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.15);
-            backdrop-filter: blur(4px);
+    }
+
+    @media ${theme.media.tablet} {
+        &::before,
+        ${Button} {
+            opacity: 1;
         }
     }
 `;

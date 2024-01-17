@@ -36,5 +36,5 @@ export const SkillCategory = memo((props: SkillCategoryPropsType) => {
 });
 
 const SkillCategoryWrapper = styled(FlexWrapper)`
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 `;

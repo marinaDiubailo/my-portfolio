@@ -7,9 +7,7 @@ import { Container } from '../../components/UIKit/Container';
 import { FlexWrapper } from '../../components/UIKit/FlexWrapper';
 import { theme } from '../../styles/Theme';
 
-type HeaderPropsType = {};
-
-export const Header = memo((props: HeaderPropsType) => {
+export const Header = memo(() => {
     return (
         <StyledHeader>
             <Container>
@@ -28,8 +26,10 @@ const StyledHeader = styled.header`
     width: 100%;
     padding: 20px 0;
     z-index: 10;
-
+    /* border: 2px solid red; */
+    background-color: ${theme.bg.bgPrimary};
+    /* 
     ${Container} {
         background-color: ${theme.bg.bgPrimary};
-    }
+    } */
 `;

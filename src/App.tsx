@@ -10,12 +10,12 @@ function App() {
     return (
         <StyledApp>
             <Header />
-            <main style={{ flexGrow: '1' }}>
+            <div>
                 <Main />
                 <Skills />
                 <Portfolio />
                 <Contacts />
-            </main>
+            </div>
             <Footer />
         </StyledApp>
     );

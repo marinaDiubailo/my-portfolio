@@ -22,7 +22,7 @@ export const Main = memo(() => {
                     justify="space-around"
                     wrap="wrap"
                 >
-                    <div style={{ marginBottom: '60px' }}>
+                    <div style={{ marginBottom: '45px' }}>
                         <Greeting>Hello!</Greeting>
                         <Name>
                             I'm <span>Marina Diubailo</span>
@@ -84,7 +84,7 @@ const Name = styled.h2`
     ${font({
         family: "'Playfair Display', serif",
         weight: 700,
-        Fmin: 36,
+        Fmin: 30,
         Fmax: 60,
     })}
 
@@ -119,7 +119,7 @@ const Introduction = styled.div`
     margin: 10px 0 30px;
 
     @media ${theme.media.mobile} {
-        margin: 20px 0 35px;
+        margin: 15px 0 30px;
     }
 `;
 

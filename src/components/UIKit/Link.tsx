@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { font } from '../../styles/Common';
 import { theme } from '../../styles/Theme';
 
 type LinkPropsType = {
@@ -6,10 +7,14 @@ type LinkPropsType = {
     normal?: boolean;
 };
 export const Link = styled.a<LinkPropsType>`
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.4;
-    color: ${theme.colors.primary};
-    font-weight: 500;
+    ${font({
+        family: "'Poppins', sans-serif",
+        color: theme.colors.primary,
+        weight: 500,
+        lineHeight: 1.4,
+        Fmin: 16,
+        Fmax: 20,
+    })}
     text-align: center;
     position: relative;
 

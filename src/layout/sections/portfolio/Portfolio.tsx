@@ -36,6 +36,7 @@ export const Portfolio = memo(() => {
                     justify="space-between"
                     align="flex-start"
                     wrap="wrap"
+                    gap="30px"
                 >
                     <Project
                         src={SocialNetwork}
