@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import Typewriter from 'typewriter-effect';
 import { Icon } from '../../../components/UIKit/Icon';
 import { FlexWrapper } from '../../../components/UIKit/FlexWrapper';
 import { Button } from '../../../components/UIKit/Button';
@@ -24,9 +25,21 @@ export const Main = memo(() => {
                             I'm <span>Marina Diubailo</span>
                         </S.Name>
                         <S.Introduction>
-                            <Text>I’m a self-taught </Text>
-                            <S.MainTitle>front-end developer</S.MainTitle>
-                            <Text>{''} based in Mogilev, Belarus.</Text>
+                            <Text>
+                                I’m a front-end developer based in Mogilev,
+                                Belarus.
+                            </Text>
+                            <S.MainTitle>
+                                <p>A Front-end Developer.</p>
+                                <Typewriter
+                                    options={{
+                                        strings: ['A Front-end Developer.'],
+                                        autoStart: true,
+                                        loop: true,
+                                        delay: 100,
+                                    }}
+                                />
+                            </S.MainTitle>
                         </S.Introduction>
                         <FlexWrapper align="center" wrap="wrap">
                             <Button variant="primary">

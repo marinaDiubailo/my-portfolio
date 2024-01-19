@@ -43,11 +43,15 @@ const Name = styled.h2`
 `;
 
 const MainTitle = styled.h1`
+    margin-top: 10px;
     ${font({
-        Fmin: 16,
-        Fmax: 20,
+        Fmin: 20,
+        Fmax: 36,
     })}
-    display: inline-block;
+
+    p {
+        display: none;
+    }
 `;
 
 const Introduction = styled.div`
