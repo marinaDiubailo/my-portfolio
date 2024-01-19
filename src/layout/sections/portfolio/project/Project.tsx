@@ -17,7 +17,7 @@ export const Project = memo((props: ProjectPropsType) => {
         <S.ProjectContainer>
             <S.ImageWrapper>
                 <S.Image src={src} alt={title} />
-                <Button variant="primary">VIEW PROJECT</Button>
+                <Button variant="primary">view project</Button>
             </S.ImageWrapper>
             <S.ProjectDescription>
                 <SubTitle transform="capitalize">{title}</SubTitle>
@@ -25,7 +25,7 @@ export const Project = memo((props: ProjectPropsType) => {
                 <Link href="#" upperCase normal>
                     demo
                 </Link>
-                <Link href="#" upperCase normal>
+                <Link href="#" upperCase normal active>
                     code
                 </Link>
             </S.ProjectDescription>

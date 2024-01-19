@@ -4,6 +4,7 @@ import { theme } from '../../styles/Theme';
 type LinkPropsType = {
     upperCase?: boolean;
     normal?: boolean;
+    active?: boolean;
 };
 export const Link = styled.a<LinkPropsType>`
     font-family: 'Poppins', sans-serif;
@@ -12,6 +13,7 @@ export const Link = styled.a<LinkPropsType>`
     line-height: 1.4;
     text-align: center;
     position: relative;
+    z-index: 0;
 
     ${(props) =>
         props.normal &&
@@ -21,14 +23,25 @@ export const Link = styled.a<LinkPropsType>`
                 width: 100%;
                 position: absolute;
                 background: ${theme.colors.accent};
-                bottom: -5px;
+                bottom: 1px;
+                opacity: 0.8;
                 left: 0;
+                z-index: -1;
             }
             &:hover {
                 &::after {
                     height: 10px;
+                    opacity: 1;
                 }
             }
+
+            ${(props) =>
+                props.active &&
+                css<LinkPropsType>`
+                    &::after {
+                        height: 10px;
+                    }
+                `}
         `}
 
     ${(props) =>

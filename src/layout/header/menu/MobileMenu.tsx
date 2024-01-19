@@ -5,19 +5,20 @@ import { S } from './Menu_Styles';
 
 export const MobileMenu = memo(({ links }: { links: LinkType[] }) => {
     const [popupIsOpen, setPopupIsOpen] = useState(false);
-    const [burgerIsOpen, setBurgerIsOpen] = useState(false);
 
     const togglePopupIsOpen = () => {
         setPopupIsOpen((prev) => !prev);
-        setBurgerIsOpen((prev) => !prev);
     };
 
     return (
         <nav>
-            <S.BurgerButton isOpen={burgerIsOpen} onClick={togglePopupIsOpen}>
+            <S.BurgerButton isOpen={popupIsOpen} onClick={togglePopupIsOpen}>
                 <span></span>
             </S.BurgerButton>
-            <S.MobileMenuPopup isOpen={popupIsOpen}>
+            <S.MobileMenuPopup
+                isOpen={popupIsOpen}
+                onClick={() => setPopupIsOpen(false)}
+            >
                 <Menu links={links} onClick={togglePopupIsOpen} />
             </S.MobileMenuPopup>
         </nav>

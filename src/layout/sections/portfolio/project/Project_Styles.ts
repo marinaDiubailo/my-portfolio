@@ -5,18 +5,12 @@ import { Link } from '../../../../components/UIKit/Link';
 import { SubTitle } from '../../../../components/UIKit/SubTitle';
 
 const ProjectContainer = styled.div`
-    width: 330px;
-    flex-grow: 1;
+    max-width: 95%;
+    margin: 20px;
     background-color: ${theme.bg.bgPrimary};
-    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.1);
-
-    ${Link} + ${Link} {
-        margin-left: 20px;
-    }
-
-    @media ${theme.media.desktop} {
-        max-width: 540px;
-    }
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 1px 1px 10px 5px rgba(255, 255, 255, 0.2);
 `;
 
 const ImageWrapper = styled.div`
@@ -63,8 +57,13 @@ const Image = styled.img`
     height: 280px;
     object-fit: cover;
 `;
+
 const ProjectDescription = styled.div`
     padding: 25px 20px;
+
+    ${Link} + ${Link} {
+        margin-left: 20px;
+    }
 
     ${SubTitle} {
         text-align: start;

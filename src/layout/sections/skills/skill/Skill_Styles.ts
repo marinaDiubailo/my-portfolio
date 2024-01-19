@@ -6,6 +6,8 @@ const SkillWrapper = styled(FlexWrapper)`
     min-height: 130px;
     padding: 5px;
     background-color: ${theme.bg.bgSecondary};
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px 5px rgba(255, 255, 255, 0.4);
     transition: all 0.2s ease 0s;
 
     &:hover {

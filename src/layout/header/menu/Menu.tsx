@@ -12,7 +12,7 @@ export const Menu = memo(({ links, onClick }: MenuPropsType) => {
     return (
         <ul role="menu">
             {links.map((link) => (
-                <S.MenuItem key={link.id} role="menuitem">
+                <S.MenuItem key={link.name} role="menuitem">
                     <Link href={link.href} onClick={onClick}>
                         {link.name}
                         <S.Mask>

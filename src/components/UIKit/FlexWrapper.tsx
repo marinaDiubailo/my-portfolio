@@ -12,7 +12,7 @@ type FlexWrapperPropsType = {
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
     display: flex;
-    // outline: 1px solid #e756d4;
+    //outline: 1px solid #e756d4;
     gap: ${(props) => props.gap || '0px'};
     width: ${(props) => props.width || '100%'};
     flex-direction: ${(props) => props.direction || 'row'};
