@@ -1,8 +1,3 @@
-export type LinkType = {
-    name: string;
-    href: string;
-};
-
 type SocialLinkType = {
     href: string;
     ariaLabel: string;
@@ -21,24 +16,7 @@ export type ProjectTabType = Tabs.React | Tabs.Next | Tabs.SPA;
 
 export const TABS = [Tabs.All, Tabs.React, Tabs.Next, Tabs.SPA];
 
-export const NAVIGATION_LINKS: LinkType[] = [
-    {
-        name: 'Home',
-        href: '#main',
-    },
-    {
-        name: 'Skills',
-        href: '#skills',
-    },
-    {
-        name: 'Portfolio',
-        href: '#portfolio',
-    },
-    {
-        name: 'Contacts',
-        href: '#contacts',
-    },
-];
+export const NAVIGATION_LINKS = ['Home', 'Skills', 'Portfolio', 'Contacts'];
 
 export const SOCIAL_LINKS: SocialLinkType[] = [
     {

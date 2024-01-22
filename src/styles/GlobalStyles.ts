@@ -63,6 +63,10 @@ export const GlobalStyles = createGlobalStyle`
         &:nth-child(3n+3){
             background-color: ${theme.bg.bgSecondary}
         }
+
+        &:not(:nth-child(2)){
+            position: relative;
+        }
     }
 
     p {

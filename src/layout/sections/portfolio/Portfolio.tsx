@@ -89,8 +89,6 @@ export const Portfolio = memo(() => {
                                     as="button"
                                     onClick={() => changeFilterStatus(tab)}
                                     active={tab === filter}
-                                    upperCase
-                                    normal
                                 >
                                     {tab}
                                 </Link>
@@ -116,12 +114,3 @@ export const Portfolio = memo(() => {
 const TabsContainer = styled.nav`
     margin-bottom: 30px;
 `;
-
-/**
- * <FlexWrapper
-                    justify="space-between"
-                    align="flex-start"
-                    wrap="wrap"
-                    gap="30px"
-                >
- */

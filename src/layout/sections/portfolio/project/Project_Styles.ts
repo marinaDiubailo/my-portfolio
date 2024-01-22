@@ -15,14 +15,14 @@ const ProjectContainer = styled.div`
 
 const ImageWrapper = styled.div`
     position: relative;
-    transition: all 0.3s ease 0s;
 
     ${Button} {
         opacity: 0;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -40%);
+        transition: ${theme.animations.transition};
     }
 
     &::before {
@@ -33,14 +33,19 @@ const ImageWrapper = styled.div`
         top: 0;
         bottom: 0;
         background: rgba(0, 0, 0, 0.15);
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur(2px);
         opacity: 0;
+        transition: ${theme.animations.transition};
     }
 
     &:hover {
-        &::before,
+        &::before {
+            opacity: 1;
+        }
+
         ${Button} {
             opacity: 1;
+            transform: translate(-50%, -50%);
         }
     }
 

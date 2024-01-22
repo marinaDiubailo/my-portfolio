@@ -97,6 +97,15 @@ const PhotoWrapper = styled.div`
     }
 `;
 
+const Text = styled.span`
+    ${font({
+        color: theme.colors.secondary,
+        lineHeight: 1.8,
+        Fmin: 16,
+        Fmax: 20,
+    })}
+`;
+
 export const S = {
     StyledSection,
     Greeting,
@@ -105,4 +114,5 @@ export const S = {
     Introduction,
     Photo,
     PhotoWrapper,
+    Text,
 };

@@ -22,10 +22,8 @@ export const Project = memo((props: ProjectPropsType) => {
             <S.ProjectDescription>
                 <SubTitle transform="capitalize">{title}</SubTitle>
                 <p>{description}</p>
-                <Link href="#" upperCase normal>
-                    demo
-                </Link>
-                <Link href="#" upperCase normal active>
+                <Link href="#">demo</Link>
+                <Link href="#" active>
                     code
                 </Link>
             </S.ProjectDescription>

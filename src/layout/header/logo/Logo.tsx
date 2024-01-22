@@ -1,9 +1,14 @@
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
 import styled from 'styled-components';
+import { animateScroll } from 'react-scroll';
 import { theme } from '../../../styles/Theme';
 
 export const Logo = memo(() => {
-    return <StyledLogo href="#main">Marina</StyledLogo>;
+    const scrollToTopHandler = useCallback(() => {
+        animateScroll.scrollToTop({ duration: 500, smooth: true });
+    }, []);
+
+    return <StyledLogo onClick={scrollToTopHandler}>Marina</StyledLogo>;
 });
 
 export const StyledLogo = styled.a`

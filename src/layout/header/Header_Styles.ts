@@ -6,7 +6,8 @@ export const Header = styled.header`
     width: 100%;
     padding: 20px 0;
     z-index: 10;
-    background-color: ${theme.bg.bgPrimary};
+    //background-color: ${theme.bg.bgPrimary};
+    backdrop-filter: blur(15px);
 `;
 
 export const S = {

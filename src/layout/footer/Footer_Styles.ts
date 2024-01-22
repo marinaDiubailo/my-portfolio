@@ -30,7 +30,7 @@ const SocialLink = styled.a`
     color: ${theme.colors.secondary};
     position: relative;
     z-index: 0;
-    transition: all 0.2s ease 0s;
+    transition: ${theme.animations.transition};
 
     &:hover {
         transform: scale(1.3);

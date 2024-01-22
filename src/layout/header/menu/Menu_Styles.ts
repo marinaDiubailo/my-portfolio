@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { Link } from 'react-scroll';
 import { theme } from '../../../styles/Theme';
 
 const Mask = styled.span`
@@ -9,6 +10,7 @@ const Mask = styled.span`
     height: 50%;
     overflow-y: hidden;
     color: ${theme.colors.primary};
+    transition: ${theme.animations.transition};
 
     & + & {
         top: 50%;
@@ -21,38 +23,6 @@ const Mask = styled.span`
 
 const MenuItem = styled.li`
     position: relative;
-
-    a {
-        color: transparent;
-    }
-
-    &:before {
-        content: '';
-        display: inline-block;
-        height: 3px;
-        background-color: ${theme.colors.primary};
-        position: absolute;
-        top: 50%;
-        left: -10px;
-        right: -10px;
-        z-index: 1;
-        transform: scale(0);
-    }
-
-    &:hover {
-        &::before {
-            transform: scale(1);
-        }
-
-        ${Mask} {
-            color: ${theme.colors.accent};
-            transform: skewX(12deg) translatex(4px);
-
-            & + ${Mask} {
-                transform: skewX(12deg) translatex(-4px);
-            }
-        }
-    }
 `;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
@@ -115,28 +85,36 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     position: fixed;
+    //background-color: red;
     background-color: #27303de4;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    //bottom: 0 !important;
+    height: 100vh;
     z-index: 100;
-    display: none;
-
-    ${(props) =>
-        props.isOpen &&
-        css<{ isOpen: boolean }>`
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        `}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: all 0.6s ease-in-out;
 
     ul {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: 10px;
+        transition: all 0.6s ease-in-out;
     }
+
+    ${(props) =>
+        props.isOpen &&
+        css<{ isOpen: boolean }>`
+            transform: translateY(0);
+            & ul {
+                gap: 40px;
+            }
+        `}
 `;
 
 const Navigation = styled.nav`
@@ -147,8 +125,50 @@ const Navigation = styled.nav`
     }
 `;
 
+const NavLink = styled(Link)`
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: transparent;
+    line-height: 1.4;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 3px;
+        background-color: ${theme.colors.primary};
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        right: -10px;
+        z-index: 1;
+        transform: scale(0);
+        transition: ${theme.animations.transition};
+    }
+
+    &:hover,
+    &:active {
+        &::before {
+            transform: scale(1);
+        }
+
+        ${Mask} {
+            color: ${theme.colors.accent};
+            transform: skewX(12deg) translatex(4px);
+
+            & + ${Mask} {
+                transform: skewX(12deg) translatex(-4px);
+            }
+        }
+    }
+
+    @media ${theme.media.tablet} {
+        font-size: 26px;
+    }
+`;
+
 export const S = {
     Mask,
+    NavLink,
     MenuItem,
     BurgerButton,
     MobileMenuPopup,

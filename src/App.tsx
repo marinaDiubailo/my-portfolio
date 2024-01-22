@@ -5,10 +5,13 @@ import { Main } from './layout/sections/main/Main';
 import { Skills } from './layout/sections/skills/Skills';
 import { Portfolio } from './layout/sections/portfolio/Portfolio';
 import { Footer } from './layout/footer/Footer';
+import { Particle } from './components/Particle/Particle';
+import { GoTopBtn } from './components/GoTopBtn/GoTopBtn';
 
 function App() {
     return (
         <StyledApp>
+            <Particle />
             <Header />
             <div>
                 <Main />
@@ -17,6 +20,7 @@ function App() {
                 <Contacts />
             </div>
             <Footer />
+            <GoTopBtn />
         </StyledApp>
     );
 }

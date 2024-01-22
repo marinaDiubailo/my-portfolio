@@ -1,27 +1,31 @@
 import { memo } from 'react';
-import { LinkType } from '../../../data/links';
-import { Link } from '../../../components/UIKit/Link';
+import { NAVIGATION_LINKS as links } from '../../../data/links';
 import { S } from './Menu_Styles';
 
 type MenuPropsType = {
-    links: LinkType[];
     onClick?: () => void;
 };
 
-export const Menu = memo(({ links, onClick }: MenuPropsType) => {
+export const Menu = memo(({ onClick }: MenuPropsType) => {
     return (
         <ul role="menu">
             {links.map((link) => (
-                <S.MenuItem key={link.name} role="menuitem">
-                    <Link href={link.href} onClick={onClick}>
-                        {link.name}
+                <S.MenuItem key={link} role="menuitem">
+                    <S.NavLink
+                        to={link.toLowerCase()}
+                        activeClass="active"
+                        smooth
+                        spy
+                        onClick={onClick}
+                    >
+                        {link}
                         <S.Mask>
-                            <span>{link.name}</span>
+                            <span>{link}</span>
                         </S.Mask>
                         <S.Mask>
-                            <span>{link.name}</span>
+                            <span>{link}</span>
                         </S.Mask>
-                    </Link>
+                    </S.NavLink>
                 </S.MenuItem>
             ))}
         </ul>

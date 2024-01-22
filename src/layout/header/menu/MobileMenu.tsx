@@ -1,9 +1,8 @@
 import { memo, useState } from 'react';
-import { LinkType } from '../../../data/links';
 import { Menu } from './Menu';
 import { S } from './Menu_Styles';
 
-export const MobileMenu = memo(({ links }: { links: LinkType[] }) => {
+export const MobileMenu = memo(() => {
     const [popupIsOpen, setPopupIsOpen] = useState(false);
 
     const togglePopupIsOpen = () => {
@@ -19,7 +18,7 @@ export const MobileMenu = memo(({ links }: { links: LinkType[] }) => {
                 isOpen={popupIsOpen}
                 onClick={() => setPopupIsOpen(false)}
             >
-                <Menu links={links} onClick={togglePopupIsOpen} />
+                <Menu onClick={togglePopupIsOpen} />
             </S.MobileMenuPopup>
         </nav>
     );

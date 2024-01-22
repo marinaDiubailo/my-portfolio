@@ -1,5 +1,4 @@
 import { memo, useState, useEffect } from 'react';
-import { NAVIGATION_LINKS as links } from '../../data/links';
 import { Logo } from './logo/Logo';
 import { DesktopMenu } from './menu/DesktopMenu';
 import { MobileMenu } from './menu/MobileMenu';
@@ -22,11 +21,7 @@ export const Header = memo(() => {
             <Container>
                 <FlexWrapper justify="space-between" align="center">
                     <Logo />
-                    {width < breakpoint ? (
-                        <MobileMenu links={links} />
-                    ) : (
-                        <DesktopMenu links={links} />
-                    )}
+                    {width < breakpoint ? <MobileMenu /> : <DesktopMenu />}
                 </FlexWrapper>
             </Container>
         </S.Header>

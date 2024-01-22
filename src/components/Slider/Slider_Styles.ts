@@ -26,7 +26,7 @@ export const Dot = styled.button`
     border-radius: 50%;
     cursor: pointer;
     font-size: 0;
-    transition: 0.2s;
+    transition: ${theme.animations.transition};
 
     &:hover {
         background-color: ${theme.colors.accentHover};

@@ -1,9 +1,10 @@
 import { memo } from 'react';
 import Typewriter from 'typewriter-effect';
+import Tilt from 'react-parallax-tilt';
+
 import { Icon } from '../../../components/UIKit/Icon';
 import { FlexWrapper } from '../../../components/UIKit/FlexWrapper';
 import { Button } from '../../../components/UIKit/Button';
-import { Text } from '../../../components/UIKit/Text';
 import serviceSprite from '../../../assets/icons/serviceSprite.svg';
 import photo from '../../../assets/images/photo1.jpg';
 import { Container } from '../../../components/UIKit/Container';
@@ -11,7 +12,7 @@ import { S } from './Main_Styles';
 
 export const Main = memo(() => {
     return (
-        <S.StyledSection id="main">
+        <S.StyledSection id="home">
             <Container>
                 <FlexWrapper
                     align="center"
@@ -25,10 +26,10 @@ export const Main = memo(() => {
                             I'm <span>Marina Diubailo</span>
                         </S.Name>
                         <S.Introduction>
-                            <Text>
+                            <S.Text>
                                 I’m a front-end developer based in Mogilev,
                                 Belarus.
-                            </Text>
+                            </S.Text>
                             <S.MainTitle>
                                 <p>A Front-end Developer.</p>
                                 <Typewriter
@@ -67,9 +68,19 @@ export const Main = memo(() => {
                             </Button>
                         </FlexWrapper>
                     </div>
-                    <S.PhotoWrapper>
-                        <S.Photo src={photo} alt="Marina Diubailo" />
-                    </S.PhotoWrapper>
+                    <Tilt
+                        className="parallax-effect-img"
+                        tiltMaxAngleX={40}
+                        tiltMaxAngleY={40}
+                        perspective={800}
+                        transitionSpeed={1500}
+                        scale={1.1}
+                        gyroscope={true}
+                    >
+                        <S.PhotoWrapper>
+                            <S.Photo src={photo} alt="Marina Diubailo" />
+                        </S.PhotoWrapper>
+                    </Tilt>
                 </FlexWrapper>
             </Container>
         </S.StyledSection>

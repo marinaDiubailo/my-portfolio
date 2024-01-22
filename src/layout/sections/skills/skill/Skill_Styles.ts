@@ -8,11 +8,6 @@ const SkillWrapper = styled(FlexWrapper)`
     background-color: ${theme.bg.bgSecondary};
     border-radius: 15px;
     box-shadow: 1px 1px 10px 5px rgba(255, 255, 255, 0.4);
-    transition: all 0.2s ease 0s;
-
-    &:hover {
-        transform: scale(1.15);
-    }
 `;
 
 const SkillTitle = styled.h4`
