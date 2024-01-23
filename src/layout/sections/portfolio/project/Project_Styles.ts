@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import { theme } from '../../../../styles/Theme';
 import { Button } from '../../../../components/UIKit/Button';
 import { Link } from '../../../../components/UIKit/Link';

@@ -1,6 +1,5 @@
 import { memo, useCallback, useState } from 'react';
 import styled from 'styled-components';
-import { motion, AnimatePresence } from 'framer-motion';
 import { FlexWrapper } from '../../../components/UIKit/FlexWrapper';
 import { Link } from '../../../components/UIKit/Link';
 import { Container } from '../../../components/UIKit/Container';

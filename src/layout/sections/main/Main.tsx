@@ -1,7 +1,6 @@
 import { memo } from 'react';
 import Typewriter from 'typewriter-effect';
 import Tilt from 'react-parallax-tilt';
-import { Link } from 'react-scroll';
 import { Icon } from '../../../components/UIKit/Icon';
 import { FlexWrapper } from '../../../components/UIKit/FlexWrapper';
 import { Button } from '../../../components/UIKit/Button';
