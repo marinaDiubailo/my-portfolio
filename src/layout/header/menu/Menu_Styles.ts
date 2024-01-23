@@ -10,6 +10,7 @@ const Mask = styled.span`
     height: 50%;
     overflow-y: hidden;
     color: ${theme.colors.primary};
+    cursor: pointer;
     transition: ${theme.animations.transition};
 
     & + & {

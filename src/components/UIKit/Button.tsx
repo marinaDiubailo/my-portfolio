@@ -8,6 +8,7 @@ type ButtonPropsType = {
 
 export const Button = styled.button<ButtonPropsType>`
     display: inline-flex;
+    border-radius: 5px;
     align-items: center;
     gap: 10px;
     padding: 20px 35px;
@@ -18,6 +19,11 @@ export const Button = styled.button<ButtonPropsType>`
     })};
     word-wrap: nowrap;
     transition: ${theme.animations.transition};
+
+    &:active {
+        position: relative;
+        top: 2px;
+    }
 
     ${(props) =>
         props.variant === 'primary' &&

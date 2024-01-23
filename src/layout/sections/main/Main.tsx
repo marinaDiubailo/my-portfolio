@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import Typewriter from 'typewriter-effect';
 import Tilt from 'react-parallax-tilt';
-
+import { Link } from 'react-scroll';
 import { Icon } from '../../../components/UIKit/Icon';
 import { FlexWrapper } from '../../../components/UIKit/FlexWrapper';
 import { Button } from '../../../components/UIKit/Button';
@@ -43,7 +43,11 @@ export const Main = memo(() => {
                             </S.MainTitle>
                         </S.Introduction>
                         <FlexWrapper align="center" wrap="wrap">
-                            <Button variant="primary">
+                            {/* <Button
+                                as={Link}
+                                to={}
+                                variant="primary"
+                            >
                                 <Icon
                                     sprite={serviceSprite}
                                     id="mail"
@@ -53,8 +57,8 @@ export const Main = memo(() => {
                                     fill="white"
                                 />
                                 Email me
-                            </Button>
-                            <Button variant="secondary">
+                            </Button> */}
+                            <Button variant="primary">
                                 <Icon
                                     sprite={serviceSprite}
                                     id="download"

@@ -46,13 +46,16 @@ export const GoTopBtn = memo(() => {
 
 const GoTop = styled.button`
     background-color: ${theme.colors.accent};
-    opacity: 0.8;
+    opacity: 0.6;
     color: ${theme.colors.primary};
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     position: fixed;
     right: 30px;
     bottom: 30px;
-    box-shadow: 2px 2px 10px 0px rgb(255, 255, 255);
+    // box-shadow: 2px 2px 10px 0px rgb(255, 255, 255);
+    box-shadow: 0px 5px 35px rgba(255, 255, 255, 0.4);
     transition: ${theme.animations.transition};
 
     &:hover {

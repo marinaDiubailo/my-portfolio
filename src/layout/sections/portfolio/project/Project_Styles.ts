@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { theme } from '../../../../styles/Theme';
 import { Button } from '../../../../components/UIKit/Button';
 import { Link } from '../../../../components/UIKit/Link';
@@ -10,11 +11,13 @@ const ProjectContainer = styled.div`
     background-color: ${theme.bg.bgPrimary};
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 1px 1px 10px 5px rgba(255, 255, 255, 0.2);
+    //box-shadow: 1px 1px 10px 5px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.15);
 `;
 
 const ImageWrapper = styled.div`
     position: relative;
+    //padding: 20px;
 
     ${Button} {
         opacity: 0;

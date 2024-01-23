@@ -15,6 +15,7 @@ export const StyledLogo = styled.a`
     font-family: 'Imperial Script', cursive;
     color: ${theme.colors.primary};
     font-size: 2rem;
+    cursor: pointer;
 
     &::first-letter {
         color: ${theme.colors.accent};

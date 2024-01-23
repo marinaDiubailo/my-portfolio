@@ -19,6 +19,7 @@ const FooterTitle = styled.span`
 const SocialList = styled.ul`
     display: flex;
     margin: 30px 0;
+    position: relative;
 
     li + li {
         margin-left: 40px;

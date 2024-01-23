@@ -21,6 +21,7 @@ const Field = styled.input`
     padding: 7px 15px;
     width: 100%;
     border: 1px solid ${theme.colors.secondary};
+    border-radius: 5px;
     ${font({
         family: 'inherit',
         color: theme.colors.primary,
